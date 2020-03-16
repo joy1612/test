@@ -3,16 +3,4 @@ os: linux
 files:
  - source: first.php
    destination: /var/www/html
-hooks:
- BeforeInstall:
-   - location: script.sh
-     timeout: 300
-     runas: root
- AfterInstall:
-   - location: after_install.sh
-     timeout: 300
-     runas: root
- ApplicationStart:
-   - location: start_server.sh
-     timeout: 300
 runas: root
